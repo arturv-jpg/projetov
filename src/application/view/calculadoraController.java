@@ -43,11 +43,11 @@ public class calculadoraController {
   
     	txtNumero1.textProperty().addListener(
     			(observable, oldValue, newValue)->{
-    				txtNumero1.setText(newValue.replaceAll("[^\\d]",""));
+    				txtNumero1.setText(newValue.replaceAll("[^\\d.]",""));
     			});
     txtNumero2.textProperty().addListener(
 			(observable, oldValue, newValue)->{
-				txtNumero2.setText(newValue.replaceAll("[^\\d]",""));
+				txtNumero2.setText(newValue.replaceAll("[^\\d.]",""));
 			});
     btnReset.setOnAction(e->{
     	txtNumero1.setText("0");
