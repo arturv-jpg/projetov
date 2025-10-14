@@ -33,6 +33,23 @@ public class calculadoraController {
     
     @FXML
     private void initialize() {
+    	/*
+    	iniciar programa com valores zerados */
+    	txtNumero1.setText("0");
+		txtNumero2.setText("0");
+		
+		/* O setOnAction aciona o evento do componente
+    	por exemplo: o click no botão
+    	ou o enter em um text field */
+		
+		btnSubtrair.setOnAction(e->{Subtrair();});
+    	btnMultiplicar.setOnAction(e->{Multiplicar();});
+    	btnDividir.setOnAction(e->{dividir();});
+    	btnReset.setOnAction(e->{
+    		txtNumero1.setText("0");
+    		txtNumero2.setText("0");
+    		lblResultado.setText("Resultado:");    		
+    	});
 
     	/* adicionar um escutador de evento no
         text field de numero
@@ -74,12 +91,17 @@ public class calculadoraController {
        		txtNumero2.setText("0");
        	}
     	double Resultado = numero1+numero2;
-    	lblResultado.setText(String.valueOf(Resultado));
+    	lblResultado.setText("Resultado: "+String.valueOf(Resultado));
     	// RETORNA O VALOR DE DOUBLE PARA string
     	// INFORMA O RESULTADO NA LABEL COM O setText
-  
+    	String ParOuImpar;
+    	if (Resultado % 2 == 0) {
+    		ParOuImpar=" é Par.";
+    	} else {
+            ParOuImpar=" é impar.";
+     }
+    	lblResultado.setText("Resultado: "+String.valueOf(Resultado)+ParOuImpar);
     }
-    
     public void Subtrair () {
     	double numero1 = StrToDbl(txtNumero1.getText()); 
     	double numero2 = StrToDbl(txtNumero2.getText()); 
@@ -87,6 +109,13 @@ public class calculadoraController {
     	txtNumero2.setText(String.valueOf(numero2));
     	double Resultado = numero1 - numero2;
     	lblResultado.setText(String.valueOf(Resultado));
+    	String ParOuImpar;
+    	if (Resultado % 2 == 0) {
+    		ParOuImpar=" é Par.";
+    	} else {
+            ParOuImpar=" é impar.";
+     }
+    	lblResultado.setText("Resultado: "+String.valueOf(Resultado)+ParOuImpar);
     }
     	
     public void Multiplicar () {
@@ -95,6 +124,13 @@ public class calculadoraController {
     	double Resultado = numero1 * numero2;
     	
     	lblResultado.setText(String.valueOf(Resultado));
+    	String ParOuImpar;
+    	if (Resultado % 2 == 0) {
+    		ParOuImpar=" é Par.";
+    	} else {
+            ParOuImpar=" é impar.";
+     }
+    	lblResultado.setText("Resultado: "+String.valueOf(Resultado)+ParOuImpar);
     }
     public void dividir () {
     	double numero1 = Double.valueOf(txtNumero1.getText()); 
@@ -102,9 +138,16 @@ public class calculadoraController {
     	double Resultado = numero1 / numero2;
     	
     	lblResultado.setText(String.valueOf(Resultado));
+    	String ParOuImpar;
+    	if (Resultado % 2 == 0) {
+    		ParOuImpar=" é Par.";
+    	} else {
+            ParOuImpar=" é impar.";
+     }
+    	lblResultado.setText("Resultado: "+String.valueOf(Resultado)+ParOuImpar);
     }
     // metodo de converter string para double
-    private static double StrToDbl(String numero) {
+    public static double StrToDbl(String numero) {
     	try {
     		return Double.valueOf(numero);
     	} catch(Exception e) {

@@ -4,10 +4,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane fx:id="conteudoPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.view.aplicativoController">
    <children>
       <Button layoutX="68.0" layoutY="127.0" mnemonicParsing="false" onAction="#abrirCalculadora" prefHeight="34.0" prefWidth="224.0" text="CALCULADORA">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnIMC" layoutX="68.0" layoutY="219.0" mnemonicParsing="false" onAction="#abrircalcularIMC" prefHeight="34.0" prefWidth="224.0" text="CALCULADORA IMC">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnJogo" layoutX="68.0" layoutY="300.0" mnemonicParsing="false" onAction="#abrirjogo" prefHeight="34.0" prefWidth="224.0" text="JOGO">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnJogoTiro" layoutX="68.0" layoutY="379.0" mnemonicParsing="false" onAction="#abrirjogoTiro" prefHeight="42.0" prefWidth="224.0" text="JOGO TIRO">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

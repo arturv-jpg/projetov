@@ -42,6 +42,18 @@ public class aplicativoController {
     	carregarTela("calculadora.fxml");
     }
     @FXML
+    private void abrircalcularIMC() {
+    	carregarTela("calcularIMC.fxml");
+    }
+    @FXML
+    private void abrirjogo() {
+    	carregarTela("jogo.fxml");
+    }
+    @FXML
+    private void abrirjogoTiro() {
+    	carregarTela("jogoTiro.fxml");
+    }
+    @FXML
     private void initialize() {
     	//abrirPaginaInicial();
     }
