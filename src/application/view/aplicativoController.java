@@ -54,6 +54,10 @@ public class aplicativoController {
     	carregarTela("jogoTiro.fxml");
     }
     @FXML
+    private void abrirmediaNota() {
+    	carregarTela("mediaNota.fxml");
+    }
+    @FXML
     private void initialize() {
     	//abrirPaginaInicial();
     }
