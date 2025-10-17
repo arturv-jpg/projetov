@@ -58,6 +58,10 @@ public class aplicativoController {
     	carregarTela("mediaNota.fxml");
     }
     @FXML
+    private void abriridade() {
+    	carregarTela("idade.fxml");
+    }
+    @FXML
     private void initialize() {
     	//abrirPaginaInicial();
     }
