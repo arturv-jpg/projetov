@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -14,6 +15,9 @@ public class loginController {
 
     @FXML
     private TextField txtUsuario;
+    
+    @FXML
+    private Label lblNovoUsuario;
 	
 	public void sair() {
 		System.exit(0);
@@ -62,6 +66,22 @@ public class loginController {
 		 txtUsuario.setOnAction(e->{txtSenha.requestFocus();});
 		 /* QUANDO PRESSIONAR ENTER NO CAMPO SENHA ACIONA O METODO DE ENTRAR*/
 		 txtSenha.setOnAction(e->{entrar();});
+	
+
+      lblNovoUsuario.setOnMouseClicked(event->{
+	  try {
+//abre a tela cadastrado usuario
+		Parent root = FXMLLoader.load(getClass().getResource("usuario.fxml"));
+				Stage stage = new Stage();
+				Scene scene = new Scene(root);
+				stage.setScene(scene);
+				stage.show();
+	}catch (Exception e) {
+		e.printStackTrace();
 	}
+});
+}
 }
 
+	
+		

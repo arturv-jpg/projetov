@@ -62,6 +62,10 @@ public class aplicativoController {
     	carregarTela("idade.fxml");
     }
     @FXML
+    private void abrirNovoUsuario() {
+        carregarTela("NovoUsuario");
+}
+    @FXML
     private void initialize() {
     	//abrirPaginaInicial();
     }

@@ -3,6 +3,7 @@ module Projeto {
     requires javafx.fxml;
 	requires javafx.graphics;
 	requires javafx.media;
+	requires java.sql;
 
 
     
