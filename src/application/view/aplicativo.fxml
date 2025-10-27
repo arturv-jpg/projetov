@@ -50,5 +50,10 @@
             <Font name="Bodoni MT" size="16.0" />
          </font>
       </Button>
+      <Button fx:id="btnCarro" layoutX="69.0" layoutY="214.0" mnemonicParsing="false" onAction="#abrirCarroController" prefHeight="34.0" prefWidth="224.0" text="Carro">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

@@ -63,7 +63,11 @@ public class aplicativoController {
     }
     @FXML
     private void abrirNovoUsuario() {
-        carregarTela("NovoUsuario");
+        carregarTela("Usuario.fxml");
+}
+    @FXML
+    private void abrirCarroController() {
+        carregarTela("carro.fxml");
 }
     @FXML
     private void initialize() {

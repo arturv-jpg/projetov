@@ -8,10 +8,13 @@
 <VBox xmlns="http://javafx.com/javafx/17.0.2"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="application.view.CarroDetalheController"
-      spacing="20" alignment="CENTER" padding="20">
+      spacing="20" alignment="CENTER">
+      
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
     <Label fx:id="lblInfo" text="Informações do carro aparecerão aqui" wrapText="true"/>
     <Button fx:id="btnLigar" text="Ligar Carro" onAction="#ligarCarro"/>
     <Button fx:id="btnDesligar" text="Desligar Carro" onAction="#desligarCarro"/>
-
 </VBox>
-
